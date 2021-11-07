@@ -1,5 +1,5 @@
 function [ K,W,J_all ] = algo2_synK(A,B2,B1,C,D,K,k,epsilon) 
-%% matlab codes for Algorithm 2 in the automatica manuscript
+%% matlab codes for Algorithm 2 in the manuscript "Structured controller synthesis through block-diagonal factorization and parameter space optimization"
 %% YALMIP toolbox and the solver Gurobi are required to run this algorithm
 %% authors: yuanliming@nimte.ac.cn, chensilu@nimte.ac.cn
 %% set the iteration index
