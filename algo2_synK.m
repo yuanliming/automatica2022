@@ -32,7 +32,6 @@ for i=1:N % incorporate the structural constraints of KD in (13)
 W1 = blkdiag(W1,kron(eye(r(i)),sdpvar(ni,ni)));% Theorem 3, eq.(35)
 W2 = blkdiag(W2,kron(eye(r(i)),sdpvar(ni,mi)));% Theorem 3, eq.(35)
 W3 = blkdiag(W3,kron(eye(r(i)),sdpvar(mi,mi)));% Remark 6 (iii)
-%W3 = sdpvar(2,2);
 end
 W = [W1  W2;
      W2' W3]; % construct the parameter matrix eq.(32) 
@@ -50,12 +49,12 @@ ep2=max((eig(Q1)));
 J_all = [];
  while (-ep1) >= epsilon || (ep2) >= epsilon
     if ep1 <= -epsilon
-    disp('£¨ep1£©violated') 
+    disp('ep1 violated') 
     v1 = mineigv(value(W));
     P = [P, v1'*W*v1 >=0]; % include the cutting plane according to violation of ep1
     end
     if ep2 >= epsilon
-    disp('£¨ep2£©violated')
+    disp('ep2 violated')
     v2 = maxeigv(value(THETA1(1:bar_n,1:bar_n))); 
     v2 = [v2;zeros(bar_m,1)];
     P = [P, v2'*THETA1*v2 <= 0]; % include the cutting plane according to violation of ep2
