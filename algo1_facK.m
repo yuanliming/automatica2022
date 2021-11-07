@@ -1,5 +1,5 @@
 function [r,TC,TR] = algo1_facK(K,k)
-%% matlab codes for Algorithm 1. k={K1,K2,...,KN}
+%% matlab codes for Algorithm 1 in the manuscript "Structured controller synthesis through block-diagonal factorization and parameter space optimization". k={K1,K2,...,KN}. 
 %% authors: yuanliming@nimte.ac.cn, chensilu@nimte.ac.cn
 r = []; TC = [];TR = [];
 [m,n] = size(K);
