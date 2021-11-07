@@ -1,8 +1,8 @@
 function [ K,W,J_all ] = algo2_synK(A,B2,B1,C,D,K,k,epsilon) 
 %% matlab codes for Algorithm 2 in the automatica manuscript
 %% YALMIP toolbox and the solver Gurobi are required to run this algorithm
+%% authors: yuanliming@nimte.ac.cn, chensilu@nimte.ac.cn
 %% set the iteration index
-%% any question/adivice contact yuanliming@nimte.ac.cn, chensilu@nimte.ac.cn
 l = 0; 
 %% run Algo1 to obtain the factorization results
 [r,TC,TR] = algo1_facK(K,k); % k={K1,K2,...,KN}
