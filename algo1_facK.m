@@ -1,8 +1,6 @@
 function [r,TC,TR] = algo1_facK(K,k)
-%% factorize K=TCKDTR, 
-%% KD is block diagonal matrix with diagonal blocks of k={K1,K2,..,KN}
-%% TC, TR are constant matrices. see Theorem 1.
-%% any question/adivice contact yuanliming@nimte.ac.cn, chensilu@nimte.ac.cn
+%% matlab codes for Algorithm 1. k={K1,K2,...,KN}
+%% authors: yuanliming@nimte.ac.cn, chensilu@nimte.ac.cn
 r = []; TC = [];TR = [];
 [m,n] = size(K);
 for i = 1:length(k)
@@ -14,7 +12,6 @@ ri = rank(til_Ti);
 [Fi,Gi] = fr(til_Ti);
 TRi = reshape(Fi,n,ri*ni)'; % eq.(19)
 TCi = reshape(Gi',m,ri*mi); % eq.(20)
-%KD=kron(eye(r),k);
 r = [r ri];
 TC = [TC TCi];
 TR = [TR;TRi];
