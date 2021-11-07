@@ -44,20 +44,18 @@ P = [P, W(i,i) >= 0];
 end % initial constraints for a finite solution (positive diagonal element)
 z = trace(R*W); % upper bound of H2 norm square eq.(40)
 assign(W,0) % initial solution
-% ep1 = min((eig(value(W))));
-% ep2 = max((eig(value(THETA1(1:bar_n,1:bar_n)))));
 ep1=0;
 ep2=max((eig(Q1)));
 %% cutting plane algorithm for serching the optimal W for Problem 2
 J_all = [];
  while (-ep1) >= epsilon || (ep2) >= epsilon
     if ep1 <= -epsilon
-    disp('£¨ep1£©violated') 
+    disp('Â£Â¨ep1Â£Â©violated') 
     v1 = mineigv(value(W));
     P = [P, v1'*W*v1 >=0]; % include the cutting plane according to violation of ep1
     end
     if ep2 >= epsilon
-    disp('£¨ep2£©violated')
+    disp('Â£Â¨ep2Â£Â©violated')
     v2 = maxeigv(value(THETA1(1:bar_n,1:bar_n))); 
     v2 = [v2;zeros(bar_m,1)];
     P = [P, v2'*THETA1*v2 <= 0]; % include the cutting plane according to violation of ep2
