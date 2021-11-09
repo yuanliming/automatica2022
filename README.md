@@ -9,7 +9,7 @@ algo2_synK.m   (The feedback matrix synthesis function)
 ----------------------Section 4.4 Algorithm 2 
 
 main_example_1.m 
-----------------------Section 4.1 Block-diagonal factorization of the feedback matrix (Example 1)
+----------------------Section 4.1 Example 1
 
 main_facKid.m
 main_synKid.m
