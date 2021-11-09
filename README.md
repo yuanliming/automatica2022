@@ -4,7 +4,7 @@ The codes for the simulations in the manuscript entitled "Structured controller 
 ==========================================================================================================
 algo1_facK.m is the feedback matrix factorization function cooresponds to Algorithm 1 in Section 4.1
 algo2_synK.m is the feedback matrix synthesis function cooresponds to Algorithm 2 in Section 4.4
-==========================================================================================================
+
 
 ----------------------------Section 4.1 Block-diagonal factorization of the feedback matrix (Example 1)
 main_example_1.m 
