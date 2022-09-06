@@ -1,4 +1,4 @@
-# mypaper2021
+# Automatica2022
 The codes for the simulations in the manuscript entitled "Structured controller synthesis through block-diagonal factorization and parameter space optimization"
 
 
